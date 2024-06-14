@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>管樂介紹</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    </head>
+    <body>
+        <header>
+            <a href="https://snowoaq.github.io/windband-sky/" class="logo-container">
+                <img src="logo.png" alt="管樂世界 Logo">
+                <span class="logo-text">管樂天地</span>
+            </a>
+            <h1>管樂介紹</h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropbtn">銅管</a>
+                      <div class="dropdown-content">
+                        <a href="https://snowoaq.github.io/windband-tp/">小號</a>
+                        <a href="https://snowoaq.github.io/windband-tb/">長號</a>
+                        <a href="https://snowoaq.github.io/windband-horn/">法國號</a>
+                        <a href="https://snowoaq.github.io/windband-eup/">上低音號</a>
+                        <a href="https://snowoaq.github.io/windband-tuba/">低音號</a>
+                      </div>
+                    </li>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropbtn">木管</a>
+                      <div class="dropdown-content">
+                        <a href="https://snowoaq.github.io/windband-cl/">單簧管</a>
+                        <a href="https://snowoaq.github.io/windband-oboe/">雙簧管</a>
+                        <a href="https://snowoaq.github.io/windband-flute/">長笛</a>
+                        <a href="https://snowoaq.github.io/windband-sax/">薩克斯風</a>
+                      </div>
+                    </li>
+                    <li><a href="https://snowoaq.github.io/windband-per/">打擊</a></li>
+                  </ul>
+            </nav>
+        </header>
+        <main>
+            <form class="search-form" action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="搜尋...">
+                <button type="submit">搜尋</button>
+            </form>
+            <section id="categories">
+                <h2>樂器分類</h2>
+                <div class="category">
+                    <img src="木管.jpg" alt="木管">
+                    <a href="#woodwind">木管</a>
+                    <p>關於木管樂器的介紹。</p>
+                </div>
+                <div class="category">
+                    <img src="銅管.jpg" alt="銅管">
+                    <a href="#brass">銅管</a>
+                    <p>關於銅管樂器的介紹。</p>
+                </div>
+                <div class="category">
+                    <img src="打擊樂器.jpg" alt="打擊">
+                    <a href="#percussion">打擊</a>
+                    <p>關於打擊樂器的介紹。</p>
+                </div>
+            </section>
+            <h2>關於此網站</h2>
+            <p>本網站想讓大家能更認識各種管樂器。管樂器是一個包含多種樂器的大家族，主要分為銅管樂器和木管樂器兩大類。</p>
+            <p>銅管樂器如小號、長號、法國號和低音號，通常由黃銅製成，音色明亮且響亮，主要依靠唇部震動產生聲音。</p>
+            <p>木管樂器如長笛、單簧管、雙簧管和薩克斯風，通常由木材或金屬製成，通過吹氣並使用指孔或按鍵調節音高。</p>
+            <p>這些樂器在交響樂團、室內樂、爵士樂和流行音樂中均有廣泛應用。</p>
+            <p>它們各具特色，能夠表現出豐富的音樂情感和多樣的音色，為音樂作品增添了色彩和層次。</p>
+        </main>
+        <footer>
+            <p>本網站僅供靜宜大學動態網頁設計課程，繳交作業用，不為其他商業用途 © 2024 管樂介紹</p>
+            <div id="currentTime">當前時間：載入中...</div> <!-- 顯示當前時間的區域 -->
+            <div class="footer-links">
+                <a href="https://snowoaq.github.io/windband-sky/">返回首頁</a>
+            </div>
+        </footer>
+        <script>
+            $(document).ready(function(){
+                $('.carousel').slick({
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                });
+                $('.video-carousel').slick({
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    dots: true,
+                });
+            });
+             // 更新並顯示當前時間的函數
+    function updateCurrentTime() {
+        const now = new Date(); // 獲取當前的日期和時間
+        document.getElementById('currentTime').innerText = '當前時間：' + now.toLocaleString('zh-TW'); // 更新當前時間顯示
+    }
+    setInterval(updateCurrentTime, 1000); // 每秒更新一次時間
+        </script>
+        
+    </body>
+</html>
+
+
